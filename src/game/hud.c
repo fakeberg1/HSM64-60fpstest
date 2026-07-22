@@ -542,30 +542,8 @@ void render_hud(void) {
 
     if (hudDisplayFlags == HUD_DISPLAY_NONE) {
         sPowerMeterHUD.animation = POWER_METER_HIDDEN;
-        sPowerMeterStoredHealth = 8;
-        sPowerMeterVisibleTimer = 0;
-#ifdef BREATH_METER
-        sBreathMeterHUD.animation = BREATH_METER_HIDDEN;
-        sBreathMeterStoredValue = 8;
-        sBreathMeterVisibleTimer = 0;
-#endif
     } else {
-#ifdef VERSION_EU
-        // basically create_dl_ortho_matrix but guOrtho screen width is different
-        Mtx *mtx = alloc_display_list(sizeof(*mtx));
-
-        if (mtx == NULL) {
-            return;
-        }
-
-        create_dl_identity_matrix();
-        guOrtho(mtx, -16.0f, SCREEN_WIDTH + 16, 0, SCREEN_HEIGHT, -10.0f, 10.0f, 1.0f);
-        gSPPerspNormalize(gDisplayListHead++, 0xFFFF);
-        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(mtx),
-                  G_MTX_PROJECTION | G_MTX_MUL | G_MTX_NOPUSH);
-#else
         create_dl_ortho_matrix();
-#endif
 
         if (gCurrentArea != NULL && gCurrentArea->camera->mode == CAMERA_MODE_INSIDE_CANNON) {
             render_hud_cannon_reticle();
@@ -577,11 +555,18 @@ void render_hud(void) {
         }
 #endif
 
-        if (hudDisplayFlags & HUD_DISPLAY_FLAG_COIN_COUNT) {
+        // Modified logic to show the coin counter
+        if ((hudDisplayFlags & HUD_DISPLAY_FLAG_COIN_COUNT) 
+            || gCurrLevelNum == LEVEL_CASTLE_GROUNDS 
+            || gCurrLevelNum == LEVEL_CASTLE
+            || gCurrLevelNum == LEVEL_CASTLE_COURTYARD) {
             render_hud_coins();
         }
-
-        if (hudDisplayFlags & HUD_DISPLAY_FLAG_STAR_COUNT) {
+        // Also show the lives too
+        if ((hudDisplayFlags & HUD_DISPLAY_FLAG_STAR_COUNT) 
+            || gCurrLevelNum == LEVEL_CASTLE_GROUNDS 
+            || gCurrLevelNum == LEVEL_CASTLE
+            || gCurrLevelNum == LEVEL_CASTLE_COURTYARD) {
             render_hud_stars();
         }
 
