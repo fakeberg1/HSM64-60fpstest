@@ -1239,7 +1239,6 @@ sound/sequences/eu/22_cutscene_lakitu.m64
 sound/sequences/jp/01_cutscene_collect_star.m64
 sound/sequences/jp/02_menu_title_screen.m64
 sound/sequences/jp/03_level_grass.m64
-sound/sequences/jp/04_level_inside_castle.m64
 sound/sequences/jp/05_level_water.m64
 sound/sequences/jp/06_level_hot.m64
 sound/sequences/jp/07_level_boss_koopa.m64
@@ -1272,7 +1271,7 @@ sound/sequences/jp/21_menu_file_select.m64
 sound/sequences/sh/01_cutscene_collect_star.m64
 sound/sequences/sh/02_menu_title_screen.m64
 sound/sequences/sh/03_level_grass.m64
-sound/sequences/sh/04_level_inside_castle.m64
+
 sound/sequences/sh/05_level_water.m64
 sound/sequences/sh/06_level_hot.m64
 sound/sequences/sh/07_level_boss_koopa.m64
@@ -1306,7 +1305,7 @@ sound/sequences/sh/22_cutscene_lakitu.m64
 sound/sequences/us/01_cutscene_collect_star.m64
 sound/sequences/us/02_menu_title_screen.m64
 sound/sequences/us/03_level_grass.m64
-sound/sequences/us/04_level_inside_castle.m64
+
 sound/sequences/us/05_level_water.m64
 sound/sequences/us/06_level_hot.m64
 sound/sequences/us/07_level_boss_koopa.m64
