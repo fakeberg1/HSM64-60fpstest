@@ -988,7 +988,7 @@
 "sound/sequences/eu/01_cutscene_collect_star.m64": [626,{"eu":[7954384]}],
 "sound/sequences/eu/02_menu_title_screen.m64": [8282,{"eu":[7955024]}],
 "sound/sequences/eu/03_level_grass.m64": [5131,{"eu":[7963312]}],
-"sound/sequences/eu/04_level_inside_castle.m64": [2505,{"eu":[7968448]}],
+
 "sound/sequences/eu/05_level_water.m64": [4788,{"eu":[7970960]}],
 "sound/sequences/eu/06_level_hot.m64": [2455,{"eu":[7975760]}],
 "sound/sequences/eu/07_level_boss_koopa.m64": [3424,{"eu":[7978224]}],
