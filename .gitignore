@@ -1205,7 +1205,7 @@ sound/samples/sfx_water/02_swim.aiff
 sound/sequences/eu/01_cutscene_collect_star.m64
 sound/sequences/eu/02_menu_title_screen.m64
 sound/sequences/eu/03_level_grass.m64
-sound/sequences/eu/04_level_inside_castle.m64
+
 sound/sequences/eu/05_level_water.m64
 sound/sequences/eu/06_level_hot.m64
 sound/sequences/eu/07_level_boss_koopa.m64
